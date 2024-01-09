@@ -42,7 +42,7 @@ mqttClient.on('connect', () => {
 
     // Subscribe to each device's MQTT topic
     results.forEach((device) => {
-      const { device_type, device_id, mqtt_topic } = device;
+      const { device_type, device_subtype, device_id, mqtt_topic } = device;
       const deviceClient = mqtt.connect(MQTT_BROKER_URL, {
         username: MQTT_USERNAME,
         password: MQTT_PASSWORD,
@@ -59,6 +59,7 @@ mqttClient.on('connect', () => {
           // Broadcast the message to the hub topic with device information
           const hubMessage = {
             device_type,
+            device_subtype,
             device_id,
             message: message.toString(),
           };
