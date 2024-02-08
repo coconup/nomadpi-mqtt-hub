@@ -61,6 +61,7 @@ mqttClient.on('connect', () => {
             device_type,
             device_subtype,
             device_id,
+            mqtt_topic,
             message: message.toString(),
           };
           mqttClient.publish(HUB_MQTT_TOPIC, JSON.stringify(hubMessage));
