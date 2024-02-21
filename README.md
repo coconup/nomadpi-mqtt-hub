@@ -1,6 +1,6 @@
-# VanPi MQTT Hub Server
+# nomadPi MQTT Hub Server
 
-This Node.js server connects to an MQTT broker and a MariaDB database to manage devices. Each device is associated with an MQTT topic, and the server listens for messages sent to each device's topic. Received messages are then broadcasted to a central MQTT hub topic, enriched with device information. This single topic can then be consumed by the rest of the stack (for example by the [VanPi Automation API](https://github.com/coconup/vanpi-automation-api)) in order to build functionalities on a flexible set of devices.
+This Node.js server connects to an MQTT broker and a MariaDB database to manage devices. Each device is associated with an MQTT topic, and the server listens for messages sent to each device's topic. Received messages are then broadcasted to a central MQTT hub topic, enriched with device information. This single topic can then be consumed by the rest of the stack (for example by the [nomadPi Automation API](https://github.com/coconup/nomadpi-automation-api)) in order to build functionalities on a flexible set of devices.
 
 ## Prerequisites
 
